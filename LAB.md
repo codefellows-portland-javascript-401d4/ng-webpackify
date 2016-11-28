@@ -12,7 +12,9 @@ least one inline style option.
 
 * Use at least one repeating construct, either `ng-repeat` or `ng-options`, to control dropdown, radio buttons or checkboxes
 
-Example: 
+## Example
+
+![example](example.png)
 
 ## Rubric
 
