@@ -1,0 +1,26 @@
+<DOCTYPE html>
+
+<html ng-app="myApp">
+    <head>
+        <title>Message App</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0-rc.2/angular.js"></script>
+        <script src="main-app.js"></script>
+        <link rel="stylesheet" type="style/css" href="style.css"></script>
+    </head>
+    <body ng-controller="MainCtrl as ctrl">
+        <h1>Really Cool Message App</h1>
+        
+        <label for="message">What do you want to write?
+            <input type="text" name="message" ng-model="ctrl.message">
+        </label>
+        <br>
+        <label for="message-style">How should it look?
+            <select name="message-style" ng-options="style for style in ctrl.styles track by $index" ng-model="ctrl.style">
+            </select>
+        </label>
+        <br>
+        <button ng-click="ctrl.randomStyle()">Random</button>
+        <h2>Your {{ctrl.style}} Message:</h2>
+        <p ng-class="ctrl.style">{{ctrl.message}}</p>
+    </body>
+</html>

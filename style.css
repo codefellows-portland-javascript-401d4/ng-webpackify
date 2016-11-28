@@ -1,0 +1,21 @@
+/*['Normal', 'Robot', 'Alien', 'Cowboy', 'Astronaut'];*/
+
+p.Normal {
+    color: black;
+}
+
+.Robot {
+    color: darkslategrey;
+}
+
+.Alien {
+    color: lawngreen;
+}
+
+.Cowboy {
+    color: darkred;
+}
+
+.Astronaut {
+    color: navy;
+}
