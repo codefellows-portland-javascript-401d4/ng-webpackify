@@ -18,5 +18,5 @@ least one inline style option.
 
 ## Rubric
 
-Meets Requirements: 5pts
-Works: 5pts
+* Meets Requirements: 5pts
+* Works Correctly: 5pts
