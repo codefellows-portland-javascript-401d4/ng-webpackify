@@ -44,11 +44,13 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	const angular = __webpack_require__(1);
+	'use strict';
+
+	var angular = __webpack_require__(1);
 
 	var app = angular.module('myApp', []);
 
-	app.controller('formCtrl', function($scope) {
+	app.controller('formCtrl', function ($scope) {
 	  $scope.fonts = ['Courier New', 'Helvetica', 'Impact', 'Times New Roman', 'Verdana'];
 	  $scope.styles = ['fancy', 'plain', 'modern'];
 	  $scope.style = 'plain';
