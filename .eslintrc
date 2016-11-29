@@ -1,8 +1,15 @@
 {
-   "settings": {
-    "ecmascript": 6
-  },
+   "parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"modules": true,
+			"experimentalObjectRestSpread": true,
+			"impliedStrict": true
+		}
+	},
   "ecmaFeatures": {
+    "impliedStrict": true
   },
   "env": {
     "browser": true,

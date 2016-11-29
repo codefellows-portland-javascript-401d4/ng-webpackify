@@ -1,6 +1,5 @@
-'use strict';
-
 const app = angular.module('myApp', []);
+require('./main.css');
 
 app.controller('mainController', function($scope) {
   $scope.colors = [
@@ -9,5 +8,5 @@ app.controller('mainController', function($scope) {
     { name: 'red' },
     { name: 'green' }
   ];
-  $scope.defaultColor = $scope.colors[0];
+  $scope.myColor = $scope.colors[0];
 });

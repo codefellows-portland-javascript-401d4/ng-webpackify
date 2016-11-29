@@ -42,16 +42,23 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var app = angular.module('myApp', []);
+	__webpack_require__(1);
 	
 	app.controller('mainController', function ($scope) {
 	  $scope.colors = [{ name: 'black' }, { name: 'blue' }, { name: 'red' }, { name: 'green' }];
-	  $scope.defaultColor = $scope.colors[0];
+	  $scope.myColor = $scope.colors[0];
 	});
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
