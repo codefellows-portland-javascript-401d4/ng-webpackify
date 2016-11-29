@@ -3,34 +3,55 @@
     <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Lobster|Old+Standard+TT" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Open+Sans+Condensed:300|Oswald|Cabin+Sketch" rel="stylesheet">
 
     <title>caitlin's ng-editor</title>
+
+    <style>
+        .message {
+            min-height: 30px;
+            box-sizing: border-box;
+            border: 1px solid #000000;
+            padding: 10px;
+        }
+        .fatface {
+            color: #f08080;
+        }
+        .lobster {
+            color: #9f9e7f;
+        }
+        .condensed {
+            color:  #14418a;
+        }
+        .oswald {
+            color: #6897bb; 
+        }
+    </style>
+
     </head>
 
-    <body ng-controller="messageControl">
+    <body ng-controller="mainController">
         <section>
-            <h1>hello {{ reverse(userName) }}</h1>
+            <h1>hello {{ reverse(name) }}</h1>
             <hr>
             <div>
                 <label>what's your name?</label>
-                <input ng-model="userName" placeholder="Enter your name here">
+                <input ng-model="name" placeholder="Enter your name here">
             </div>
         </section>
 
         <section>
             <hr>
             <label>what would you like to say?</label>
-            <input type="text" ng-model="userMessage" placeholder="Enter your message here">
+            <input type="text" ng-model="message" placeholder="Enter your message here">
             
             <label>choose a style</label>
-            <select ng-model="style" ng-options="s.font for s in styles"></select>
-            <select ng-model="style" ng-options="s.hex for s in styles"></select>
+            <select ng-model="style" ng-options="s for s in styles"></select>
             <input type="range" ng-model="fontSize" min="18" max="48">
 
             <hr>
-            <div ng-class="['userMessage', style]" style="font-size: {{ fontSize }}px;">
-                {{ userMessage }}
+            <div ng-class="['message', style]" style="font-size: {{ fontSize }}px;">
+                {{ message }}
             </div>
         </section>
     </body>
