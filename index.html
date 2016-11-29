@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Angular hello world</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
 </head>
 
-<body>
+<body ng-controller="helloController">
 
     <p>Hello world</p>
+    <div>{{ greeting }}</div>
 
 </body>
 </html>
