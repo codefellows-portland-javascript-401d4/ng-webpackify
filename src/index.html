@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Webpackify</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+</head>
+<body>
+  <div ng-controller="mainController">
+    <label>Message:</label>
+    <input type="text" ng-model="message" placeholder="Enter your message">
+
+    <label>Color:</label>
+    <select ng-model="color" ng-options="color.name for color in colors"></select>
+
+    <p ng-class="defaultColor.name">{{message}}</p>
+  </div>
+  
+</body>
+</html>
