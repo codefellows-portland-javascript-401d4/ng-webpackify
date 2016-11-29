@@ -36,10 +36,14 @@
     <div ng-controller="styleController">
         <label>Message: </label>
         <input placeholder="Enter some text" ng-model="styleText">
+        <br />
+        <input type="range" ng-model="fontSize" min="12" max="60" ng-init="fontSize = 18px">
+        <br />
         <input type="radio" name="style" ng-model="isGirly" ng-value="true">Girly &nbsp
         <input type="radio" name="style" ng-model="isFuture" ng-value="true">Futuristic &nbsp
         <input type="radio" name="style" ng-model="isCode" ng-value="true">Code &nbsp
-        <p ng-class="{girly: isGirly, future: isFuture, code: isCode}">{{styleText}}</p>
+        <p ng-class="{girly: isGirly, future: isFuture, code: isCode}"
+            style="font-size: {{fontSize}}px">{{styleText}}</p>
     </div>
 
 </body>
