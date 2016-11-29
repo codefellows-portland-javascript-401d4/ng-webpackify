@@ -1,5 +1,6 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) Angular Webpackify
 
+
 ## Description
 
 Create a simple angular app (you can resuse your editor or write something new) that uses webpack and webpack-dev-server
