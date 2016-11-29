@@ -49,10 +49,10 @@
 	var angular = __webpack_require__(1);
 	__webpack_require__(3);
 	
-	angular.module('messageEditorApp', []).controller('textCtrl', function textCtrl() {
-	  this.moods = ['neutral', 'happy', 'sad', 'tired'];
-	  this.inCurr = 'neutral';
-	  this.fontSize = 18;
+	angular.module('messageEditorApp', []).controller('textCtrl', function ($scope) {
+	  $scope.moods = ['neutral', 'happy', 'sad', 'tired'];
+	  $scope.inCurr = 'neutral';
+	  $scope.fontSize = 18;
 	});
 
 /***/ },
