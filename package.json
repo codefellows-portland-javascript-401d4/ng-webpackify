@@ -16,5 +16,20 @@
   "bugs": {
     "url": "https://github.com/Waxhoya/ng-webpackify/issues"
   },
-  "homepage": "https://github.com/Waxhoya/ng-webpackify#readme"
+  "homepage": "https://github.com/Waxhoya/ng-webpackify#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "css-loader": "^0.26.0",
+    "eslint": "^3.11.1",
+    "eslint-loader": "^1.6.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.24.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "angular": "^1.5.9"
+  }
 }
