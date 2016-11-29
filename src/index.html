@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body ng-controller="main">
+    <div>
+        Message <input type="text" ng-model="message">
+        Style <select ng-model="myStyle" ng-options="style for style in styles"></select>
+        Casing <select ng-model="myCasing" ng-options="casing for casing in casings"></select>
+        Text Size <input type="range" ng-model="mySize">
+    </div>
+    <br>
+    <hr>
+    <div>
+        Output: <span ng-class="myStyle" ng-style="fontsize(mySize)">{{casingjs(message,myCasing)}}</span>
+    </div>
+</body>
+</html>

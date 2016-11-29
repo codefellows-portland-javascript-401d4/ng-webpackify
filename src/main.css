@@ -1,0 +1,19 @@
+.modern {
+    font-family: sans-serif;
+    color: gray;
+}
+
+.boring {
+    font-family: monospace;
+    color: black;
+}
+
+.fancy {
+    font-family: serif;
+    color: #B3E5FC;
+    text-shadow:
+        -1px -1px 0 #03A9F4,
+        1px -1px 0 #03A9F4,
+        -1px 1px 0 #03A9F4,
+        1px 1px 0 #03A9F4
+}
