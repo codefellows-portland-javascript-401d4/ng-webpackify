@@ -13,7 +13,7 @@
       How loud you are:
       <input type="number" min="18" ng-model="text.fontSize">
       <hr>
-      Your Message: <span ng-class=text.inCurr style="font-size:{{text.fontSize}}px;">{{message}}</span>
+      Your Message: <span ng-class=text.inCurr ng-style="{ 'font-size': text.fontSize + 'px' }">{{message}}</span>
     </div>
   <script type="text/javascript" src="main.js"></script></body>
 </html>
