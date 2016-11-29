@@ -2,27 +2,21 @@
 
 const angular = require('angular');
 const css = require('./main.css');
+const reverse = require('./reverse');
 
 const app = angular.module('caraldiApp', []);
 
 app.controller('messageControl', function($scope) {
-  $scope.username = "userName"
-  $scope.message = "userMessage"
-  $scope.display = function(userName, userMessage) {
-    return `${ userName } says: ${ userMessage }!`;
-  }
-});
-
-app.controller('userFont', function($scope) {
-  $scope.name = [
-    { name: 'Lobster'},
-    { name: 'Indie Flower'},
-    { name: 'Inconsolata'}
-  ];
-
-  $scope.color = [
-    { hex: '#9f9e7f' },
-    { hex: '#f08080' },
-    { hex: '#6897bb' }
-  ];
+    $scope.styles = [
+        { font: 'standard', hex: '#14418a' },
+        { font: 'retro', hex: '#9f9e7f' },
+        { font: 'handwritten', hex: '#f08080' },
+        { font: 'typewriter', hex: '#6897bb' }    
+    ];
+    $scope.style = 'standard';
+    $scope.fontSize = 22;
+    
+    $scope.userMessage = 'hello';
+    $scope.userName = 'world';
+    $scope.reverse = reverse;
 });

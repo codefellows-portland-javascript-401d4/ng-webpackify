@@ -1,54 +1,37 @@
 <!DOCTYPE html>
 <html ng-app="caraldiApp">
-  <head>
+    <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
-    <script src="main.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Lobster|Old+Standard+TT" rel="stylesheet">
-    <title>ng-editor</title>
-    <style>
-      .standard {
-        font-size: 32px;
-        font-family: 'Old Standard TT', serif;
-        border: 1px solid #14418a;
-      }
-      .retro {
-        font-family: 'Lobster', cursive;
-        color: #9f9e7f;
-      }
-      .handwritten {
-        font-family: 'Indie Flower', cursive;
-        color: #f08080;
-      }
-      .typewriter {
-        font-family: 'Inconsolata', monospace;
-        color: #6897bb;
-      }
-    </style>
-  </head>
 
-  <body>
-    <div ng-controller="messageControl">
-      <hr>
-      <label ng-class="standard">What's your name?
-        <input type="text" ng-model="userName" placeholder="Enter your name here">
-      </label>
-      <hr>
-      <label ng-class="standard">What would you like to say?<br>
-        <textarea cols="40" rows="5" ng-model="userMessage" placeholder="Enter your message here"></textarea>
-      </label>
-    </div>
+    <title>caitlin's ng-editor</title>
+    </head>
 
-    <div ng-controller="fontController">
-      <h2>What font would you like your message to be rendered in?</h2>
-      <select name="font">
-        <option value="">Select a font</option>
-        <option ng-class="retro">Retro script</option>
-        <option ng-class="handwritten">Printed by hand</option>
-        <option ng-class="typewriter">Typewriter</option>
-      </select>
-      <hr>
-      <ul ng-repeat="font in fontController(userFont) track by $index">
-        <li>{{ font }}</li>
-      </ul>
-  </body>
+    <body ng-controller="messageControl">
+        <section>
+            <h1>hello {{ reverse(userName) }}</h1>
+            <hr>
+            <div>
+                <label>what's your name?</label>
+                <input ng-model="userName" placeholder="Enter your name here">
+            </div>
+        </section>
+
+        <section>
+            <hr>
+            <label>what would you like to say?</label>
+            <input type="text" ng-model="userMessage" placeholder="Enter your message here">
+            
+            <label>choose a style</label>
+            <select ng-model="style" ng-options="s.font for s in styles"></select>
+            <select ng-model="style" ng-options="s.hex for s in styles"></select>
+            <input type="range" ng-model="fontSize" min="18" max="48">
+
+            <hr>
+            <div ng-class="['userMessage', style]" style="font-size: {{ fontSize }}px;">
+                {{ userMessage }}
+            </div>
+        </section>
+    </body>
 </html>
