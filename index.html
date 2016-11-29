@@ -7,15 +7,14 @@
     <script src="./main.js"></script>
 </head>
 
-<body ng-controller="helloController">
-
-    <p>Hello world</p>
+<body>
+    <div ng-controller="helloController">
+    <h1>Angular {{greeting}} World</h1>
     <select ng-model="selectedLang"
             ng-change="selected(selectedLang)"
             ng-options="lang for lang in languages">
     </select>
-    <div>{{ greeting }}</div>
-
+    </div>
 
 </body>
 </html>
