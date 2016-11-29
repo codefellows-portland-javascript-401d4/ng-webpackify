@@ -1,3 +1,6 @@
+const angular = require('angular');
+require('./style.css');
+
 var app = angular.module('myApp', []);
 
 app.controller('formMsg', function($scope) {

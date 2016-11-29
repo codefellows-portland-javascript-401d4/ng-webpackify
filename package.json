@@ -2,7 +2,7 @@
   "name": "webpackify-areel",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "webpack-dev-server --inline",
     "build": "webpack"
