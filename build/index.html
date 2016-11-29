@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Message Editor</title>
+  <link href="styles.css" rel="stylesheet"></head>
+  <body>
+    <div ng-app="messageEditorApp" ng-controller="textCtrl">
+      What you're talking about:
+      <input type="text" ng-model="message">
+      How you're feeling:
+      <select ng-model="text.inCurr" ng-options="m for m in moods"></select>
+      How loud you are:
+      <input type="number" min="18" ng-model="text.fontSize">
+      <hr>
+      Your Message: <span ng-class=text.inCurr ng-style="{ 'font-size': text.fontSize + 'px' }">{{message}}</span>
+    </div>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>
