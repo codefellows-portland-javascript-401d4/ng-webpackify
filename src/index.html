@@ -2,48 +2,46 @@
 <html ng-app="caraldiApp">
     <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
-
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Open+Sans+Condensed:300|Oswald|Cabin+Sketch" rel="stylesheet">
-
     <title>caitlin's ng-editor</title>
-
     <style>
         .message {
-            min-height: 30px;
-            box-sizing: border-box;
             border: 1px solid #000000;
             padding: 10px;
         }
         .fatface {
+            font-family: 'Abril Fatface', cursive;
             color: #f08080;
         }
         .lobster {
+            font-family: 'Lobster', cursive;
             color: #9f9e7f;
         }
         .condensed {
+            font-family: 'Open Sans Condensed', sans-serif;
             color:  #14418a;
         }
         .oswald {
+            font-family: 'Oswald', sans-serif;
             color: #6897bb; 
         }
     </style>
-
     </head>
 
     <body ng-controller="mainController">
         <section>
-            <h1>hello {{ reverse(name) }}</h1>
+            <h1>hello {{ name }}</h1>
             <hr>
             <div>
                 <label>what's your name?</label>
-                <input ng-model="name" placeholder="Enter your name here">
+                <input type="text" placeholder="Enter your name here">
             </div>
         </section>
 
         <section>
             <hr>
             <label>what would you like to say?</label>
-            <input type="text" ng-model="message" placeholder="Enter your message here">
+            <input type="text" placeholder="Enter your message here">
             
             <label>choose a style</label>
             <select ng-model="style" ng-options="s for s in styles"></select>
