@@ -1,8 +1,8 @@
 'use strict';
 
 const angular = require('angular');
-const css = require('./main.css');
 const reverse = require('./reverse');
+require('./main.css');
 
 const app = angular.module('caraldiApp', []);
 
