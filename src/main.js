@@ -1,4 +1,5 @@
 const angular = require('angular');
+require('!style!css!./style.css');
 
 var app = angular.module('myApp', []);
 
