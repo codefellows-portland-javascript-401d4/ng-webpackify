@@ -10,7 +10,12 @@
 <body ng-controller="helloController">
 
     <p>Hello world</p>
+    <select ng-model="selectedLang"
+            ng-change="selected(selectedLang)"
+            ng-options="lang for lang in languages">
+    </select>
     <div>{{ greeting }}</div>
+
 
 </body>
 </html>
