@@ -1,21 +1,69 @@
 /*['Normal', 'Robot', 'Alien', 'Cowboy', 'Astronaut'];*/
 
-p.Normal {
+/*font-family: 'Bungee Inline', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Creepster', cursive;
+font-family: 'Rye', cursive;
+font-family: 'Faster One', cursive;  
+font-family: 'Caesar Dressing', cursive;
+font-family: 'UnifrakturCook', cursive;
+font-family: 'Akronim', cursive;
+font-family: 'Nosifer', cursive;
+font-family: 'Shojumaru', cursive;
+font-family: 'Frijole', cursive;*/
+p {
+    font-size: 2em; 
+}
+
+.Normal {
     color: black;
 }
 
+.Monster {
+    color: darkolivegreen;
+    font-family: 'Nosifer', cursive;
+
+}
+.VanGogh {
+    color: darkblue;
+    font-family: 'Akronim', cursive;
+}
+
+.Vampire {
+    color: darkred;
+    font-family: 'UnifrakturCook', cursive;
+}
+
+.Scout {
+    color: darkolivegreen;
+    font-family: 'Caesar Dressing', cursive;
+}
+.Earthquake {
+    color: saddlebrown;
+    font-family: 'Frijole', cursive;
+}
+
+.Ninja {
+    color: black;
+    font-family: 'Shojumaru', cursive;
+
+}
 .Robot {
     color: darkslategrey;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .Alien {
     color: lawngreen;
+    font-family: 'Creepster', cursive;
 }
 
 .Cowboy {
     color: darkred;
+    font-family: 'Rye', cursive;
 }
 
 .Astronaut {
     color: navy;
+    font-family: 'Faster One', cursive;
 }

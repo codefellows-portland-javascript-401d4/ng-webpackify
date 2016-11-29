@@ -1,21 +1,21 @@
-<DOCTYPE html>
-
 <html ng-app="myApp">
     <head>
         <title>Message App</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0-rc.2/angular.js"></script>
         <script src="main-app.js"></script>
-        <link rel="stylesheet" type="style/css" href="style.css"></script>
+        <link href="https://fonts.googleapis.com/css?family=Akronim|Bungee+Inline|Caesar+Dressing|Creepster|Faster+One|Frijole|Nosifer|Press+Start+2P|Rye|Shojumaru|UnifrakturCook:700" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"></link>
     </head>
     <body ng-controller="MainCtrl as ctrl">
         <h1>Really Cool Message App</h1>
         
         <label for="message">What do you want to write?
-            <input type="text" name="message" ng-model="ctrl.message">
+            <textarea name="message" ng-model="ctrl.message"></textarea>
         </label>
         <br>
         <label for="message-style">How should it look?
-            <select name="message-style" ng-options="style for style in ctrl.styles track by $index" ng-model="ctrl.style">
+            <select name="message-style"  ng-model="ctrl.style">
+                <option ng-repeat="style in ctrl.styles track by $index" ng-value="style">{{style}}</option>
             </select>
         </label>
         <br>
