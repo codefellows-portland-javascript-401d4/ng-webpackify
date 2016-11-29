@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-init="txt=''">  
+  <head>
+    <meta encoding="utf-8">
+  </head>
+  <body>
+    <section ng-controller="styleCtrl">
+      <label for="message">MESSAGE</label>
+      <input ng-model="txt" type="text" name="message">
+      <select ng-model="styleOpt" ng-options="string for string in styleOpts" name="styles">
+        <option  value="">stylings</option>
+      </select>
+      <input ng-model="rangeVal" type="range" min="4" max="8">
+      <div>{{rangeVal}}</div>
+      <hr>
+      <div ng-style="{'font-size': rangeVal + 'em'}" class={{styleOpt}}>
+        {{txt}}
+      </div>
+    </section>
+  </body>
+</html>
