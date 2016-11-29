@@ -1,3 +1,6 @@
+const angular = require('angular');
+require('./style.css');
+
 angular.module('myApp', [])
 .controller('MainCtrl', [function() {
   var self = this;
