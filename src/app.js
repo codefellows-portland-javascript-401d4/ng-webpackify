@@ -6,7 +6,7 @@ require('./main.css');
 
 app
     .controller('main', ['$scope', function($scope) {
-        $scope.message = 'hello world';
+        $scope.message = 'Hello World';
         $scope.styles = ['modern', 'boring', 'fancy'];
         $scope.myStyle = $scope.styles[0];
         $scope.casings = ['N/A', 'lower', 'upper'];

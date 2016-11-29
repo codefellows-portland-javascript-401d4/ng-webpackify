@@ -26,8 +26,8 @@ module.exports = {
             loader: 'babel-loader', //translates the files into proper JS
             query: {
                 presets: ['es2015'],
-                // cacheDirectory: true,
-                // plugins: ['transform-runtime']
+                cacheDirectory: true,
+                plugins: ['transform-runtime']
             }
         }, {
             test: /\.css$/,
