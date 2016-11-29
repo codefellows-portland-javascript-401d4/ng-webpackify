@@ -11,7 +11,7 @@ app.controller('messageControl', function($scope) {
     $scope.style = 'condensed';
     $scope.fontSize = 22;
     
-    $scope.userMessage = 'hello';
-    $scope.userName = 'world';
+    $scope.message = 'hello';
+    $scope.name = 'world';
     $scope.reverse = reverse;
 });
