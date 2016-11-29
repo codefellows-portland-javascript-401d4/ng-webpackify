@@ -7,6 +7,13 @@ module.exports = {
         path: './build',
         filename: "bundle.js"
     },
+    plugins: [
+    new HtmlWebpackPlugin({
+        template: './src/index.html'
+    }),
+    new ExtractedTextPlugin("style.css")
+    ]
+
     module: {
         preloaders: [{
             test: /\.js$/,
