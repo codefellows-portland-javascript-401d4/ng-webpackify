@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+  <script src="main.js"></script>
+  <style>
+    .not {
+      font-size: 1em;
+      color: green;
+    }
+    .somewhat {
+      font-size: 1.5em;
+      color: brown;
+    }
+    .very {
+      font-size: 2.5em;
+      color: red;
+    }
+    .extremely {
+      font-size: 5em;
+      color: orangered;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div ng-controller="frustratedCtrl">
+    <label>Describe how Angular makes you feel:</label>
+    <br>
+    <input type="text" ng-model="text">
+    <br>
+    <label>And your current level of frustration:</label>
+    <br>
+    <select ng-model="frustrated">
+      <option ng-repeat="level in data">{{ level }}</option>
+    </select>
+    <br>
+    <hr>
+    <p ng-class="{ not: frustrated === 'not', somewhat: frustrated === 'somewhat', very: frustrated === 'very', extremely: frustrated === 'extremely' }">{{ text }}</p>
+  </div>
+</body>
+</html>
