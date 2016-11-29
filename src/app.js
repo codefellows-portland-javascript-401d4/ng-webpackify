@@ -1,5 +1,5 @@
-const angular = require(angular);
-const css = require('')
+const angular = require('angular');
+require('./message.css');
 var app = angular.module('connote', []);
 
 app.controller('moods', function($scope) {
