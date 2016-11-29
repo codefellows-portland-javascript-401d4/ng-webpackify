@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <title>Angular hello world</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Orbitron" rel="stylesheet">
     <script src="./main.js"></script>
+    <style>
+        .girly {
+            font-family: 'Dancing Script', cursive;
+            color: deeppink;
+        }
+        .future {
+            font-family:'Orbitron', sans-serif;
+            color: darkblue;
+        }
+        .code {
+            font-family: "monospace";
+            color: darkred;
+            background-color: silver;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,6 +30,16 @@
             ng-change="selected(selectedLang)"
             ng-options="lang for lang in languages">
     </select>
+    </div>
+    <br />
+
+    <div ng-controller="styleController">
+        <label>Message: </label>
+        <input placeholder="Enter some text" ng-model="styleText">
+        <input type="radio" name="style" ng-model="isGirly" ng-value="true">Girly &nbsp
+        <input type="radio" name="style" ng-model="isFuture" ng-value="true">Futuristic &nbsp
+        <input type="radio" name="style" ng-model="isCode" ng-value="true">Code &nbsp
+        <p ng-class="{girly: isGirly, future: isFuture, code: isCode}">{{styleText}}</p>
     </div>
 
 </body>

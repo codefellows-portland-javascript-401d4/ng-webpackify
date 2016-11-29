@@ -24,5 +24,9 @@ helloApp.controller('helloController', function($scope) {
       $scope.greeting = 'Hola';
     }
   };
+});
 
+helloApp.controller('styleController', function($scope) {
+
+  
 });
