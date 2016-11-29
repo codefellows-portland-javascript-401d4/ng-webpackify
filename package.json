@@ -2,9 +2,10 @@
   "name": "webpackify-areel",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --inline",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
