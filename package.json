@@ -1,0 +1,19 @@
+{
+  "name": "webpackify-areel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Waxhoya/ng-webpackify.git"
+  },
+  "author": "A Reel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Waxhoya/ng-webpackify/issues"
+  },
+  "homepage": "https://github.com/Waxhoya/ng-webpackify#readme"
+}
