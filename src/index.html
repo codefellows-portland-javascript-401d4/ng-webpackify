@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+  <script src="main.js"></script>
+  <!--Added Marty's widget to my widgets in order to add CSS class styles for purposes of Webpack assignment-->
+  <style>
+        .message {
+            min-height: 30px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            padding: 10px;
+            color: pink;
+        }
+        .fancy {
+            font-family: cursive;
+            color: black;
+        }
+        
+        .plain {
+            font-family: monospace;
+            color: #aaa;
+        }
+        .modern {
+            font-family: sans-serif;
+            color: steelblue;
+        }
+    </style>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="formCtrl">    
+    <form>
+      Message: <input type="text" ng-model="message">
+      Select a font: <select ng-model="selectedFont" ng-options="x for x in fonts"></select>
+      Select a style: <select ng-model="style" ng-options="s for s in styles"></select>
+      <input type="button" value="embiggen" ng-click="myStyle={fontSize: 'xx-large'}">
+      <input type="button" value="debiggen" ng-click="myStyle={}">
+    </form>
+    <hr>
+    <div class="message {{style}}" 
+        <span style="font-family:{{selectedFont}}"><span ng-style="myStyle">{{message}}</span></span>
+    </div>
+  </div>
+</body>
+</html>
