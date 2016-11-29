@@ -1,0 +1,15 @@
+.huge {
+    font-size: 100px;
+}
+.classic {
+    font-family: monospace;
+    color: grey;
+}
+.fancy {
+    font-family: cursive;
+    color: purple;
+}
+.fantastic {
+    font-family: fantasy;
+    color: blue;
+}

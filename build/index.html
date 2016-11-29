@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+  <link href="styles.css" rel="stylesheet"></head>
+  <body>
+    <div ng-controller="moodCtrl">
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <label>Huge:</label>
+      <input type="checkbox" ng-model="isHuge" placeholder="Enter a name here">
+      <label>Style:</label>
+      <select ng-model="selectedItem" ng-options="item for item in items">
+        <option value="">Select a style!</option>
+      </select>
+      <hr>
+      <h1 ng-class="[{huge: isHuge}, selectedItem]">{{yourName}} loves Angular!</h1>
+    </div>
+  <script type="text/javascript" src="bundle.js"></script></body>
+</html>
