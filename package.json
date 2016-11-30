@@ -1,0 +1,38 @@
+{
+  "name": "ng-webpackify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run test && node main.js",
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "test:watch": "mocha -- -w",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mizutombo/ng-webpackify.git"
+  },
+  "keywords": [
+    "http",
+    "server",
+    "angular"
+  ],
+  "author": "Tom Shultz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mizutombo/ng-webpackify"
+  },
+  "homepage": "https://github.com/mizutombo/ng-webpackify#LAB",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.8.1",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0"
+  }
+}
