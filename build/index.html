@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="caraldiApp">
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Open+Sans+Condensed:300|Oswald|Cabin+Sketch" rel="stylesheet">
+    <title>caitlin's ng-editor</title>
+    <style>
+        .message {
+            border: 1px solid #000000;
+            padding: 1em;
+        }
+        .fatface {
+            font-family: 'Abril Fatface', cursive;
+            color: #f08080;
+        }
+        .lobster {
+            font-family: 'Lobster', cursive;
+            color: #9f9e7f;
+        }
+        .condensed {
+            font-family: 'Open Sans Condensed', sans-serif;
+            color:  #14418a;
+        }
+        .oswald {
+            font-family: 'Oswald', sans-serif;
+            color: #6897bb; 
+        }
+    </style>
+    <link href="styles.css" rel="stylesheet"></head>
+
+    <body ng-controller="mainController">
+        <h1>hello {{ name }}</h1>
+        <hr>
+        <section id="user-input">
+            <div class="what-name">
+                <label>what's your name?</label>
+                <input type="text" placeholder="Enter your name here">
+            </div>
+
+            <div class="what-say">
+                <label>what would you like to say?</label>
+                <input type="text" placeholder="Enter your message here">
+            </div>
+
+            <div class="what-font">
+                <label>in which font?</label>
+                <select ng-model="style" ng-options="s for s in styles"></select>
+            </div>
+            
+            <div class="what-font">
+                <label>how big/small?</label>
+                <input type="range" ng-model="fontSize" min="18" max="48">
+            </div>
+        </section>
+    
+        <div ng-class="['message', style]" style="font-size: {{ fontSize }}px;">
+            {{ message }}
+        </div>
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
