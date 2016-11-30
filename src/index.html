@@ -7,7 +7,7 @@
     <style>
         .message {
             border: 1px solid #000000;
-            padding: 10px;
+            padding: 1em;
         }
         .fatface {
             font-family: 'Abril Fatface', cursive;
@@ -29,28 +29,32 @@
     </head>
 
     <body ng-controller="mainController">
-        <section>
-            <h1>hello {{ name }}</h1>
-            <hr>
-            <div>
+        <h1>hello {{ name }}</h1>
+        <hr>
+        <section id="user-input">
+            <div class="what-name">
                 <label>what's your name?</label>
                 <input type="text" placeholder="Enter your name here">
             </div>
-        </section>
 
-        <section>
-            <hr>
-            <label>what would you like to say?</label>
-            <input type="text" placeholder="Enter your message here">
+            <div class="what-say">
+                <label>what would you like to say?</label>
+                <input type="text" placeholder="Enter your message here">
+            </div>
+
+            <div class="what-font">
+                <label>in which font?</label>
+                <select ng-model="style" ng-options="s for s in styles"></select>
+            </div>
             
-            <label>choose a style</label>
-            <select ng-model="style" ng-options="s for s in styles"></select>
-            <input type="range" ng-model="fontSize" min="18" max="48">
-
-            <hr>
-            <div ng-class="['message', style]" style="font-size: {{ fontSize }}px;">
-                {{ message }}
+            <div class="what-font">
+                <label>how big/small?</label>
+                <input type="range" ng-model="fontSize" min="18" max="48">
             </div>
         </section>
+    
+        <div ng-class="['message', style]" style="font-size: {{ fontSize }}px;">
+            {{ message }}
+        </div>
     </body>
 </html>
