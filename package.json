@@ -4,7 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "start": "webpack-dev-server --inline",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "css-loader": "^0.26.0",
     "eslint": "^3.11.1",
     "eslint-loader": "^1.6.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.24.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
