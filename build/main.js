@@ -52,12 +52,11 @@
 	var app = angular.module('caraldiApp', []);
 	
 	app.controller('mainController', function ($scope) {
-	    $scope.styles = ['fatface', 'lobster', 'condensed', 'oswald'];
-	    $scope.style = 'fatface';
-	    $scope.fontSize = 22;
-	
-	    $scope.message = 'hello';
-	    $scope.name = 'world';
+	    $scope.styles = ['abril', 'lobster', 'amatic', 'oswald'];
+	    $scope.style = 'abril';
+	    $scope.fontSize = 28;
+	    $scope.name = '';
+	    $scope.message = '';
 	});
 
 /***/ },

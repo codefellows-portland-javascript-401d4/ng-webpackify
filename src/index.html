@@ -2,14 +2,16 @@
 <html ng-app="caraldiApp">
     <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Open+Sans+Condensed:300|Oswald|Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster|Amatic+SC|Oswald|Cabin+Sketch" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>caitlin's ng-editor</title>
     <style>
         .message {
-            border: 1px solid #000000;
+            background-color: #eaeaea;
             padding: 1em;
         }
-        .fatface {
+        .abril {
             font-family: 'Abril Fatface', cursive;
             color: #f08080;
         }
@@ -17,8 +19,8 @@
             font-family: 'Lobster', cursive;
             color: #9f9e7f;
         }
-        .condensed {
-            font-family: 'Open Sans Condensed', sans-serif;
+        .amatic {
+            font-family: 'Amatic SC', cursive;
             color:  #14418a;
         }
         .oswald {
@@ -29,32 +31,40 @@
     </head>
 
     <body ng-controller="mainController">
-        <h1>hello {{ name }}</h1>
-        <hr>
-        <section id="user-input">
-            <div class="what-name">
-                <label>what's your name?</label>
-                <input ng-model="name">
-            </div>
+        <h1>hello,<br>nice to meet you<br>{{ name }}</h1>
 
+        <div class="what-name">
+            <label>name:</label>
+            <input ng-model="name">
+        </div>
+
+        <section id="user-input">
             <div class="what-say">
-                <label>what would you like to say?</label>
+                <label>message:</label>
                 <input ng-model="message">
             </div>
 
-            <div class="what-font">
-                <label>in which font?</label>
-                <select ng-model="style" ng-options="s for s in styles"></select>
-            </div>
-            
-            <div class="what-font">
-                <label>how big/small?</label>
-                <input type="range" ng-model="fontSize" min="18" max="48">
+            <div class="style">
+                <div class="what-font">
+                    <label>font:</label>
+                    <select ng-model="style" ng-options="s for s in styles"></select>
+                </div>
+                
+                <div class="what-size">
+                    <label>size:</label>
+                    <input type="range" ng-model="fontSize" min="18" max="48">
+                </div>
             </div>
         </section>
-    
-        <div ng-class="['message', style]" style="font-size: {{ fontSize }}px;">
-            {{ message }}
-        </div>
+
+        <i class="material-icons">flare</i>
+        <i class="material-icons">flare</i>
+        <i class="material-icons">flare</i>
+
+        <section id="message-display">
+            <div ng-class="['message', style]" style="font-size: {{ fontSize }}px;">
+                {{ message }} 
+            </div>
+        </section>
     </body>
 </html>
