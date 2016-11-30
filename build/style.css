@@ -2,4 +2,23 @@ body {
     background: antiquewhite;
 }
 
+.enlarge {
+  font-size: 10em;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+.purple {
+  color: purple
+}
+.orange {
+  color: orange
+}
+
 /*# sourceMappingURL=style.css.map*/
