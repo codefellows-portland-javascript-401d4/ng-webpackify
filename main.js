@@ -1,5 +1,8 @@
 /** Created by Gloria Anholt on 11/28/16. **/
 
+const angular = require('angular');
+require('./main.css');
+
 var helloApp = angular.module('helloApp', []);
 
 helloApp.controller('helloController', function($scope) {
@@ -28,5 +31,7 @@ helloApp.controller('helloController', function($scope) {
 
 helloApp.controller('styleController', function($scope) {
 
+  $scope.colors = ['red', 'pink', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown', 'gray', 'black'];
+  $scope.color = 'black';
   
 });
