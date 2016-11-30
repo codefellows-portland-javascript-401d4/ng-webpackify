@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Bungee|Tillana|Yellowtail" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"></head>
+    <body ng-controller="formMsg">
+        <div>
+            <form>
+                Message <input type="text" ng-model="message">
+                <input type="range" ng-model="fontRange" >
+                style <select ng-model="custStyle" ng-options="s for s in styles" min="1" max="10" > </select>
+            </form>
+            </div>
+                <h1 style="font-size: {{fontRange}}em" > <span  ng-class="custStyle"> {{message}} </span></h1>
+            </div>
+        </div>
+    <script type="text/javascript" src="bundle.js"></script></body> 
+</html>
