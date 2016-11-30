@@ -32472,10 +32472,10 @@
 	    } else if (casing === 'lower') {
 	        return str.toLowerCase();
 	    } else if (casing === 'alternate') {
-	        str = str.split('');
+	        var splitString = str.split('');
 	        var newStr = '';
 	        for (var i = 0; i < str.length; i++) {
-	            if (!i % 2) newStr += str[i].toUpperCase();else newStr += str[i].toLowerCase();
+	            if (!(i % 2)) newStr += splitString[i].toUpperCase();else newStr += splitString[i].toLowerCase();
 	        };
 	        return newStr;
 	    } else {
@@ -32501,4 +32501,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=bundle.js.map
