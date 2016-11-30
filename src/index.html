@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body ng-controller="main" class="standard">
+    <label>Message</label>
+    <input type="text" ng-model="message" placeholder="type here">
+    <label>Choose Style</label>
+    <select ng-model="fontStyle" ng-options="nnn for nnn in styles" >
+    </select>
+    <hr>
+    <ul>
+        <li ng-class="fontStyle" ng-hide="message === '' ">{{message}}</li>
+    </ul>
+</body>
+</html>
