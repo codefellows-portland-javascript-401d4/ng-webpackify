@@ -9,7 +9,7 @@ app
         $scope.message = 'Hello World';
         $scope.styles = ['modern', 'boring', 'fancy'];
         $scope.myStyle = $scope.styles[0];
-        $scope.casings = ['N/A', 'lower', 'upper'];
+        $scope.casings = ['N/A', 'lower', 'upper', 'alternate'];
         $scope.myCasing = $scope.casings[0];
         $scope.fontsize = fontsize;
         $scope.mySize = 24;

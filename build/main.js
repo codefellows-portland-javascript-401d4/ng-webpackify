@@ -48,14 +48,20 @@
 	
 	var angular = __webpack_require__(1);
 	var app = angular.module('myApp', []);
-	var upper = __webpack_require__(3);
-	__webpack_require__(4);
+	var casingjs = __webpack_require__(3);
+	var fontsize = __webpack_require__(4);
+	__webpack_require__(5);
 	
-	app.controller('main', function ($scope) {
-	    $scope.message = 'hello world';
-	    $scope.upper = upper;
-	    $scope.options = ['modern', 'boring', 'fancy'];
-	});
+	app.controller('main', ['$scope', function ($scope) {
+	    $scope.message = 'Hello World';
+	    $scope.styles = ['modern', 'boring', 'fancy'];
+	    $scope.myStyle = $scope.styles[0];
+	    $scope.casings = ['N/A', 'lower', 'upper', 'alternate'];
+	    $scope.myCasing = $scope.casings[0];
+	    $scope.fontsize = fontsize;
+	    $scope.mySize = 24;
+	    $scope.casingjs = casingjs;
+	}]);
 
 /***/ },
 /* 1 */
@@ -32458,14 +32464,37 @@
 /* 3 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
-	module.exports = function (str) {
-	    return str.toUpperCase();
+	module.exports = function (str, casing) {
+	    if (casing === 'upper') {
+	        return str.toUpperCase();
+	    } else if (casing === 'lower') {
+	        return str.toLowerCase();
+	    } else if (casing === 'alternate') {
+	        str = str.split('');
+	        var newStr = '';
+	        for (var i = 0; i < str.length; i++) {
+	            if (!i % 2) newStr += str[i].toUpperCase();else newStr += str[i].toLowerCase();
+	        };
+	        return newStr;
+	    } else {
+	        return str;
+	    };
 	};
 
 /***/ },
 /* 4 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	module.exports = function (number) {
+	    return { 'font-size': number + 'px' };
+	};
+
+/***/ },
+/* 5 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
