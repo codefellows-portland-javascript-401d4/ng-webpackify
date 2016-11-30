@@ -1,27 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="myApp" lang="en">
   <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
     
-    <style>
-      .excited {
-        font-family: impact;
-      }
-      .display{
-        font-size: 20px;
-      }
-      .blue {
-        color: blue;
-      }
-      .gold {
-        color: gold;
-      }
-      .green {
-        color: green;
-      }
 
-    </style>
     </head>
     <body>
       <div ng-controller="colorController">
@@ -40,14 +23,14 @@
 
         <hr>
 
-        <p>Your message:</p>
+        <h3>Your message:</h3>
 
         <p ng-style="{'font-size': font.size + 'px'}" 
            ng-class="[{ excited: isExcited }, yourColor.name]">{{yourMessage}}
         </p>        
 
       </div>
-      <script src="main.js"></script>
+      <!--<script src="main.js"></script>-->
     </body>
   </html>
     
