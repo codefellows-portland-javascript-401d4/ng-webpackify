@@ -1,4 +1,5 @@
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
@@ -7,12 +8,13 @@ module.exports = {
         path: './build',
         filename: "bundle.js"
     },
+    devtool: 'source-map',
     plugins: [
     new HtmlWebpackPlugin({
         template: './src/index.html'
     }),
     new ExtractedTextPlugin("style.css")
-    ]
+    ],
 
     module: {
         preloaders: [{
@@ -27,8 +29,8 @@ module.exports = {
         },
         {
             test: /\.css$/,
-            loader: "style-loader!css-loader"
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
         }]
     }
 
-}
+};
