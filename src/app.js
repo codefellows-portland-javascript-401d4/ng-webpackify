@@ -1,6 +1,6 @@
 var myApp = angular.module('ngEditor', []); // eslint-disable-line
 
-myApp.controller('main', ['$scope', function ($scope) { 
+myApp.controller('main', ['$scope', function ($scope) {
   $scope.message = 'hello world';
   $scope.family = { name: 'font family' };
   $scope.colors = [

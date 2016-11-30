@@ -1,0 +1,72 @@
+<!doctype html>
+<html ng-app="ngEditor">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <!-- changed 'main.js' to 'app.js' -->
+      <style>
+          .message {
+              min-height: 30px;
+              box-sizing: border-box;
+              width: 500px;
+              border: 2px solid black;
+              padding: 10px;
+              color: red;
+          }
+      </style>
+  </head>
+
+  <body>
+
+    <div ng-controller="main">
+
+      <label>Message:</label>
+          <br/>
+          <input type="text" ng-model="message" placeholder="Enter text here">
+          <br/>
+          <br/>
+          <div class="message {{family}}" style="font-family: {{family}}; font-size: {{value}}px; color: {{myColor.name}};">
+              {{message}}
+          </div>
+        <br/>
+
+      <label>Font Family:</label>
+        <br/>
+        <label>
+          <input type="radio" ng-model="family" value="Trebuchet">
+          Trebuchet
+        </label>
+        <br/>
+        <label>
+          <input type="radio" ng-model="family" value="Comic Sans MS">
+          Comic Sans MS
+        </label>
+        <br/>
+        <label>
+          <input type="radio" ng-model="family" value="Baskerville">
+          Baskerville
+        </label>
+        <br/>
+        <br/>
+
+      <label>Font Color:</label>
+        <br/>
+        <span class="nullable">
+        <select ng-model="myColor" ng-options="color.name for color in colors">
+          <option value="">-- choose color --</option>
+        </select>
+        </span>
+        <br/><br/>
+
+      <label>Font Size: (pixels)</label>
+        <br/>
+        <input type="range" name="range" ng-model="value" min="{{min}}"  max="{{max}}">
+        <br/>
+        <input type="number" ng-model="value">
+        <br>
+
+    </div>
+
+  <script type="text/javascript" src="main.js"></script></body>
+
+</html>
