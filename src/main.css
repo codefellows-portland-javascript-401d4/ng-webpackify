@@ -1,0 +1,24 @@
+p {
+  font-size: 1em;
+  color: dimgray;
+}
+
+.not {
+  font-size: 1em;
+  color: green;
+}
+
+.somewhat {
+  font-size: 1.5em;
+  color: brown;
+}
+
+.very {
+  font-size: 2.5em;
+  color: red;
+}
+.extremely {
+  font-size: 5em;
+  color: orangered;
+  font-style: italic;
+}
