@@ -13,6 +13,7 @@ module.exports = {
     }),
     new ExtractTextPlugin('style.css')
   ],
+  devtool: 'source-map',
   module: {
     preLoaders: [{
       test: /\.js$/,
