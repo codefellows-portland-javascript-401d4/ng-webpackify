@@ -1,0 +1,24 @@
+{
+  "name": "ng-webpackify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "exit 0",
+    "start": "webpack-dev-server --inline",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hpats67/ng-webpackify.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hpats67/ng-webpackify/issues"
+  },
+  "homepage": "https://github.com/hpats67/ng-webpackify#readme",
+  "devDependencies": {
+    "angular": "^1.5.9"
+  }
+}

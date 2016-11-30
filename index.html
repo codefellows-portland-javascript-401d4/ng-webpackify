@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.js"></script>
+    <script src="main.js"></script>
+    <style>
+      .colored {
+        color: red;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <title>Angular Beginning</title>
+  </head>
+  <body>
+    <div ng-controller="changeFont">
+      <label>Text to sample:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter some text"> </br> </br> 
+      <select ng-options="font for font in fonts" ng-model="text.font"></select> </br>
+      <h3>Font Size Slider</h3>
+      <input min="12" max="56" ng-model="text.size" type="range"> 
+      <label>Color it red:</label>
+      <input type="checkbox" ng-model="isColored">
+      <labe></label>
+      <hr>
+      <h1>Your Text: </h1>
+      <h1 ng-style="{'font-family': text.font, 'font-size': text.size + 'px'}" ng-class="{colored: isColored}">{{yourName}}</h1>
+    </div>
+  </body>
+</html>
