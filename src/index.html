@@ -11,7 +11,7 @@
   <br/>
   <span>Your random number is {{randomNum}}!</span>
   <br/>
-  <p ng-if="randomNum > aboutMe.length">{{aboutMe}}</p>
+  <p ng-if="randomNum >= aboutMe.length">{{aboutMe}}</p>
   <p ng-if="randomNum < aboutMe.length" class="longer">{{reverse(aboutMe)}}</p>
   <br/>
   <label>How much did you enjoy this activity?</label>
