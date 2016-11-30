@@ -22,10 +22,13 @@ app.controller('editorController', function($scope) {
   $scope.styles = [
     'robot',
     'oldSkool',
-    'casual'
+    'casual',
+    'horrifying'
   ];
 
-  $scope.fontColor = '#000000';
-  $scope.fontSize = 1.0;
+  $scope.textColor = '#009F00';
+  $scope.textSize = 'md';
+  $scope.resizeText();
+  $scope.fontStyle = 'casual';
 
 });
