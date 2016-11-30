@@ -1,18 +1,18 @@
 <!DOCTYPE>
-<html>
+<html ng-app="myApp">
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-       
+        <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Bungee|Tillana|Yellowtail" rel="stylesheet">
     </head>
-    <body>
-        <div ng-controller="messagesForm" >
+    <body ng-controller="formMsg">
+        <div>
             <form>
                 Message <input type="text" ng-model="message">
-                <input type="range" ng-model="fontRange" value="32" > 
+                <input type="range" ng-model="fontRange" >
+                style <select ng-model="custStyle" ng-options="s for s in styles" min="1" max="10" > </select>
             </form>
-            <br>
-            <div style="font-size: {{fontRange}}" > {{message}} 
+            </div>
+                <h1 style="font-size: {{fontRange}}em" > <span  ng-class="custStyle"> {{message}} </span></h1>
             </div>
         </div>
     </body> 
