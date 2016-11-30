@@ -1,4 +1,7 @@
 
+
+const angular = require('angular');
+
 var app = angular.module('myApp', []);
 
 app.controller('changeFont', function($scope) {
@@ -16,4 +19,4 @@ app.controller('changeFont', function($scope) {
     size: 18
   };
 
-})
+});
