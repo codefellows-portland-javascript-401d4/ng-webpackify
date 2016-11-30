@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular App</title>
+</head>
+<body ng-controller="aboutMeCtrl">
+  <textarea placeholder="Tell us about yourself!" rows=15 cols =30 maxlength=150 ng-model="aboutMe"></textarea>
+  <br/>
+  <span>Your text is <span ng-class="{tooLow: aboutMe.length < randomNum}">{{aboutMe.length || 0}}</span> characters long!</span>
+  <br/>
+  <span>Your random number is {{randomNum}}!</span>
+  <br/>
+  <p ng-if="randomNum > aboutMe.length">{{aboutMe}}</p>
+  <p ng-if="randomNum < aboutMe.length" class="longer">{{reverse(aboutMe)}}</p>
+  <br/>
+  <label>How much did you enjoy this activity?</label>
+  <select ng-model="thoughts" ng-options="x.opinion for x in opinions">{{opinion}}></select>
+  <p id="smiley">{{thoughts.smiley}}</p>
+</body>
+</html>
