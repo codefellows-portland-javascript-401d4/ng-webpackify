@@ -1,0 +1,22 @@
+{
+  "name": "ng-webpackify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanPickard/ng-webpackify.git"
+  },
+  "author": "Nathan Pickard <nathan.pickard87@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NathanPickard/ng-webpackify/issues"
+  },
+  "homepage": "https://github.com/NathanPickard/ng-webpackify#readme",
+  "devDependencies": {
+    "webpack": "^1.13.3"
+  }
+}
