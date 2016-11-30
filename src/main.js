@@ -1,3 +1,6 @@
+const angular = require('angular');
+require('./main.css');
+
 var app = angular.module('myApp', []);
 
 
