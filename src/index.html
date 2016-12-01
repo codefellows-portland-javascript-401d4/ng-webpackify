@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Creepster|Indie+Flower|Orbitron|Pinyon+Script" rel="stylesheet">
+  <style>
+    .robot {
+      font-family: 'Bungee';
+    }
+    .oldSkool {
+      font-family: 'Pinyon Script';
+    }
+    .casual {
+      font-family: 'Indie Flower';
+    }
+    .horrifying {
+      font-family: 'Creepster';
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title>Angular Editor II</title>
+</head>
+<body>
+  <div ng-controller="editorController">
+    <label>Text to edit: </label>
+    <input type="text" size="40" ng-model="editText">
+    <label>Text size: </label>
+    <select ng-model="textSize" ng-change="resizeText()">
+      <option ng-repeat="sz in ['sm', 'md', 'lg']">{{sz}}</option>
+    </select>
+    <label>Text color: </label>
+    <input type="color" ng-model="textColor">
+    <label>Font style: </label>
+    <select ng-model="fontStyle" ng-options="style for style in styles"></select>
+    <hr>
+    <span ng-class="fontStyle" style="font-size:{{textEms}}em;color:{{textColor}}">{{ editText }}</span>
+  </div>
+</body>
+</html>
