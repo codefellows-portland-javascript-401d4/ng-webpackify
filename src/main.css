@@ -1,0 +1,50 @@
+body {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 1em;
+    color: #000000;
+    text-align: center;
+    margin: 15%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.what-name, .what-say, .what-font, .what-size {
+    padding: 1em;
+    margin-bottom: 3%;
+}
+
+.what-name, .what-say {
+    background-color: #f7f7f7;
+}
+
+.material-icons {
+    margin: 2%;
+}
+
+.style {
+
+}
+
+.what-font, .what-size {
+    background-color: #dddddd;
+}
+
+label {
+    margin-right: 3%;
+}
+
+input {
+    margin-top: 1%;
+}
+
+select {
+    margin-right: 3%;
+}
+
+#message-display {
+    height: 100%;
+    width: 100%;
+    margin-top: 3%;
+}
