@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title>Easy Angular Message Editor</title>
+  </head>
+  <body>
+    <div ng-controller="mainCtrl">
+      <label>Message:</label>
+      <input type="text" ng-model="userMessage" placeholder="Enter a message here">
+      <label>Super-size your message:</label>
+      <input type="checkbox" ng-model="isEnlarge">
+      <label>Pick a color for your message:</label>
+      <select ng-model="color" ng-options="color for color in colors"></select>
+      <hr>
+      <h1 class="userMessage {{color}}" ng-class="[{enlarge: isEnlarge}]">{{userMessage}}</h1>
+    </div>
+  </body>
+</html>
