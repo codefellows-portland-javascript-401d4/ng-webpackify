@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+<link href="styles.css" rel="stylesheet"></head>
+<body>
+    <div ng-controller="styleController">
+        <label>Message:</label>
+        <input type="text" ng-model="yourMessage" placeholder="Enter your message here">
+
+        <label>Color:</label>
+        <select ng-model="myColor" ng-options="color.name for color in colors"></select>
+
+        <label>Font Size:</label>
+        <input type="range" ng-model="text.size" min=12 max=46>
+
+        <label>Cursive font:</label>
+        <input type="checkbox" ng-model="isCursive">
+
+        <hr>
+        <h1 ng-style="{'font-size': text.size + 'px'}" ng-class="[myColor.class, {cursive: isCursive}]">{{yourMessage}}</h1>
+
+        <div class="message {{myColor.class}}"
+             style="font-size: {{text.size}}px;">
+            {{yourMessage}}
+        </div>
+
+    </div>
+<script type="text/javascript" src="main.bundle.js"></script></body>
+</html>
