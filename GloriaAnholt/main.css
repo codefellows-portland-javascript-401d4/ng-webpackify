@@ -1,0 +1,13 @@
+.girly {
+    font-family: 'Dancing Script', cursive;
+    color: deeppink;
+}
+.future {
+    font-family:'Orbitron', sans-serif;
+    color: darkblue;
+}
+.code {
+    font-family: "monospace";
+    color: darkred;
+    background-color: silver;
+}
