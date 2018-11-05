@@ -1,0 +1,14 @@
+.bright {
+      color: #E6ED12;
+      font-family: Arial;
+    }
+    .bold {
+      font-family: Arial;
+      font-weight: bolder;
+    }
+
+    .fine {
+      font-family: "Palatino Linotype";
+      font-weight: lighter;
+      color: #29DBD5;
+    }

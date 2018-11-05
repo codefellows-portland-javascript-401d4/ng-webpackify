@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-controller="stylesController">
+    <label>Message</label>
+    <input type="text" ng-model="yourMessage" placeholder="Enter a message here">
+    <label>Choose a style
+      <select ng-model="myStyle" ng-options="style.name for style in styles">
+        <option value="">choose a style</option>
+      </select>
+    </label>
+    <label>Change the font size</label>
+    <input type="range" ng-model="font.size" min="12" max="60" value="18">
+    <h1 ng-style="{'font-size':font.size + 'px'}" class="{{myStyle.name}}">{{yourMessage}}</h1>
+  </div>
+</body>
+</html>
