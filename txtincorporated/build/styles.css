@@ -1,0 +1,17 @@
+.big{
+  font-family: Impact, sans-serif;
+  color: blue;
+}
+
+.bold{
+  font-family: Impact, sans-serif;
+  font-weight: bolder;
+  color: black;
+}
+
+.beautiful{
+  font-family: cursive;
+  color: goldenrod;
+}
+
+/*# sourceMappingURL=styles.css.map*/
